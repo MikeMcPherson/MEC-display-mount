@@ -18,7 +18,7 @@ bar_z=15;
 cutout_x=bar_x-20;
 cutout_y=bar_y-pc_screw_length;
 cutout_z=bar_z;
-insert_z=4;
+insert_y=4;
 insert_hole_diameter=4;
 insert_hole_y=10;
 insert_spacing=20;
@@ -42,6 +42,12 @@ difference(){
         translate([(i*insert_spacing/2),
             -bool_allowance,-bool_allowance]) {
                 ycyl(h=(bar_y+(bool_allowance*4)),
+                    d=mount_hole_diameter,
+                    center=true);
+        }
+        translate([(i*insert_spacing/2),
+            ((insert_y/2)-bool_allowance),-bool_allowance]) {
+                ycyl(h=(insert_y*1.2),
                     d=insert_hole_diameter,
                     center=true);
         }
