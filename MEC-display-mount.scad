@@ -10,20 +10,20 @@ $fn=64;
 bool_allowance=0.01;
 fillet_radius=2;
 
+mount_spacing=116;
+insert_spacing=74;
 pc_screw_length=10;
 tv_screw_length=15;
-bar_x=60;
+bar_x=mount_spacing+20;
 bar_y=tv_screw_length-3;
 bar_z=15;
-cutout_x=bar_x-20;
+cutout_x=bar_x-40;
 cutout_y=bar_y-pc_screw_length;
 cutout_z=bar_z;
 insert_y=4;
 insert_hole_diameter=4;
 insert_hole_y=10;
-insert_spacing=20;
 mount_hole_diameter=3.5;
-mount_spacing=50;
 
 // Main box
 difference(){
