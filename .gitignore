@@ -1,5 +1,5 @@
-# Object file
-*.o
-
-# Ada Library Information
-*.ali
+# Temporary files
+*.000
+*.bak
+*.gcode
+*.stl
