@@ -12,8 +12,8 @@ fillet_radius=2;
 
 mount_spacing=116;
 insert_spacing=74;
-pc_screw_length=10;
-tv_screw_length=15;
+pc_screw_length=8;
+tv_screw_length=12;
 bar_x=mount_spacing+20;
 bar_y=tv_screw_length-3;
 bar_z=15;
@@ -23,7 +23,8 @@ cutout_z=bar_z;
 insert_y=4;
 insert_hole_diameter=4;
 insert_hole_y=10;
-mount_hole_diameter=3.5;
+pc_hole_diameter=3.5;
+tv_hole_diameter=4.5;
 
 // Main box
 difference(){
@@ -42,7 +43,7 @@ difference(){
         translate([(i*insert_spacing/2),
             -bool_allowance,-bool_allowance]) {
                 ycyl(h=(bar_y+(bool_allowance*4)),
-                    d=mount_hole_diameter,
+                    d=pc_hole_diameter,
                     center=true);
         }
         translate([(i*insert_spacing/2),
@@ -52,12 +53,12 @@ difference(){
                     center=true);
         }
     }
-    // TV mounting holes (for M3 passthrough)
+    // TV mounting holes (for M4 passthrough)
     for(i=[-1,1]) {
         translate([(i*mount_spacing/2),
             -bool_allowance,-bool_allowance]) {
                 ycyl(h=(bar_y+(bool_allowance*4)),
-                    d=mount_hole_diameter,
+                    d=tv_hole_diameter,
                     center=true);
         }
     }
